@@ -6,12 +6,6 @@
     },
     "main_level": 5,
     "level_by_category": {
-        "sexual_content": 0,
-        "hate_speech": 0,
-        "scam": 0,
-        "harassment_or_bullying": 0,
-        "exposing_private_identifying_info": 0,
-        "illegal_content": 0,
         "acting_against_smth": 7
     }
 }
