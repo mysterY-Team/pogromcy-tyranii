@@ -1,0 +1,12 @@
+{
+    "report_ids": ["dc6u"],
+    "reasons": {
+        "main": "Wyzywanie każdego kogo popadnie i próba ominięcia blokady; multik konta 1004837294051708938",
+        "others": []
+    },
+    "main_level": 1,
+    "level_by_category": {
+        "hate_speech": 1,
+        "acting_against_smth": 1
+    }
+}
