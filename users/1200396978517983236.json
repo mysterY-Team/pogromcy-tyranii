@@ -1,11 +1,13 @@
 {
-    "report_ids": ["dc4a"],
+    "api_version": "1.1",
+    "report_ids": ["dc41"],
     "reasons": {
-        "main": "Czynny udział w rajdzie (dodanie bota)",
+        "main": "Czynny udział w rajdzie - dodanie bota",
         "others": []
     },
-    "main_level": 2,
-    "level_by_category": {
-        "acting_against_smth": 4
+    "mult_acc": "this",
+    "levels": {
+        "acting_against_smth": 7,
+        "_sum_": 7
     }
 }

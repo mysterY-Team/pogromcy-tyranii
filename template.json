@@ -1,11 +1,12 @@
 {
+    "api_version": "1.1",
     "report_ids": [""],
     "reasons": {
         "main": "",
         "others": []
     },
-    "main_level": 0,
-    "level_by_category": {
+    "mult_acc": null,
+    "levels": {
         "sexual_content": 0,
         "hate_speech": 0,
         "scam": 0,

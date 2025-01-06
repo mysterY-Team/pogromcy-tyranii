@@ -1,6 +1,6 @@
 # Pogromcy tyranii
 
-Githubowe API stanowiące "blacklist" do Discorda.
+Githubowe API stanowiące "blacklistę" do Discorda.
 
 ## Użycie
 
@@ -14,34 +14,45 @@ https://raw.githubusercontent.com/mysterY-Team/pogromcy-tyranii/main/<guilds | b
 -   `bots` oznaczają boty
 -   `users` oznaczają użytkowników
 
-### Odczytywanie
+...a wszystkie kategorie można pobrać z tąd:
+
+```
+https://raw.githubusercontent.com/mysterY-Team/pogromcy-tyranii/main/categories.json
+```
+
+### Odczytywanie oraz kategorie
 
 Kod JSON powinien zwrócić coś takiego (oznaczone co i jak):
 
 ```json
 {
+    "api_version": "0.0", //ciąg znaków
     "report_ids": ["dc0t", "gh#0"], // tablica ciągów znaków; dc- oznacza zgłoszenie w Discordzie, gh- oznacza zgłoszenie w GitHubie
     "reasons": {
-        "main": "Powód głowny", // ciąg znaków
+        "main": "Powód główny",
         "others": ["Powód poboczny nr. 1", "Powód poboczny nr. 2"] // tablica ciągów znaków
     },
-    "main_level": 1, // liczba od 1 do 7
-    "level_by_category": {
-        /*
-        Liczby od 1 do 7
-        Tutaj kategorie to: "sexual_content", "hate_speech", "scam", "harassment_or_bullying", "exposing_private_identifying_info", "illegal_content" oraz "acting_against_smth"
-        np:
-        {
-            "scam": 5,
-            "harassment_or_bullying": 2
-        }
-        */
+    "main_acc": null, //ciąg znaków; Snowflake (ID) albo "this"
+    "levels": {
+        //obiekt zawierający (niecałe) kategorie, liczba od 1 do 7
+        "_sum_": //liczba; suma
     }
 }
 ```
 
-Powinno się stosować poziomy w stylu `max(data.main_level, data.level_by_category[typ1] ?? 0, data.level_by_category[typ2] ?? 0, ...)` w zależności od potrzebnych dodatkowych typów do sprawdzenia (Znaki zapytania skorzystane z JavaScript; [znaczenie](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing))
+Na stan 6.01.2025 mamy 8 kategorii:
+
+-   `scam` (scam/oszukiwanie)
+-   `harassment_or_bullying` (prześladowanie lub znęcanie się)
+-   `sexual_behaviour` (zachowanie seksualne \[m.in. gwałt, pedofilstwo])
+-   `illegal_content` (nielegalny kontent)
+-   `acting_against_smth` (działania na szkodę kogoś/czegoś)
+-   `hate_speech` (mowa nienawiści)
+-   `exposing_private_identifying_info` (upublicznianie cudzych danych)
+-   `theft` (kradzież \[tj. serwera, prac - każdy typ posiadający prawa autorskie])
+
+Główny poziom zalecamy, aby wyliczyć za pomocą "średniej" sumę liczb z `levels` (dajemy także do poziomów `_sum_`, aby ułatwić niektórym pobieranie) przez ilość owych kategorii.
 
 ## Nadawanie zgłoszeń
 
-Zgłoszenia można pisać albo z GitHuba przez "Issues", lub na [serwerze Discord](https://discord.gg/jrmMNFtkZU) w oddzielnej do tego kategorii (możliwe **tylko** po odebranej roli)
+Zgłoszenia można pisać albo z GitHuba przez "Issues", lub na [serwerze Discord](https://discord.gg/jrmMNFtkZU) w oddzielnej do tego kategorii (możliwe **tylko** po odebranej roli).
