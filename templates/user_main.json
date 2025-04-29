@@ -1,0 +1,23 @@
+{
+    "api_version": "1.2",
+    "mult": false,
+    "report_ids": [""],
+    "reasons": {
+        "main": "",
+        "others": []
+    },
+    "levels": {
+        "scam": 0,
+        "harassment_or_bullying": 0,
+        "sexual_behaviour": 0,
+        "illegal_content": 0,
+        "violent_content": 0,
+        "acting_against_smth": 0,
+        "hate_speech": 0,
+        "exposing_private_identifying_info": 0,
+        "theft": 0,
+        "misinformation": 0,
+        "evasion_of_restrictions": 0,
+        "_sum_": 0
+    }
+}

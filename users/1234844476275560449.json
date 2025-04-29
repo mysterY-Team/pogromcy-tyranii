@@ -1,13 +1,14 @@
 {
-    "api_version": "1.1",
+    "api_version": "1.2",
+    "mult": false,
     "report_ids": ["dc6u"],
     "reasons": {
         "main": "Wyzywanie każdego kogo popadnie i próba ominięcia blokady",
         "others": []
     },
-    "mult_acc": "this",
     "levels": {
         "hate_speech": 3,
-        "_sum_": 3
+        "evasion_of_restrictions": 2,
+        "_sum_": 5
     }
 }

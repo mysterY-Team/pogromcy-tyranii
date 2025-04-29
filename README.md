@@ -22,21 +22,31 @@ https://raw.githubusercontent.com/mysterY-Team/pogromcy-tyranii/main/categories.
 
 ### Odczytywanie oraz kategorie
 
-Kod JSON powinien zwrócić coś takiego (oznaczone co i jak):
+Tak wygląda zwrócony obliekt przy `bots` oraz `guilds`:
 
 ```json
 {
     "api_version": "0.0", //ciąg znaków
     "report_ids": ["dc0t", "gh#0"], // tablica ciągów znaków; dc- oznacza zgłoszenie w Discordzie, gh- oznacza zgłoszenie w GitHubie
     "reasons": {
-        "main": "Powód główny",
+        "main": "Powód główny", //ciąg znaków
         "others": ["Powód poboczny nr. 1", "Powód poboczny nr. 2"] // tablica ciągów znaków
     },
-    "main_acc": null, //ciąg znaków; Snowflake (ID) albo "this"
     "levels": {
         //obiekt zawierający (niecałe) kategorie, liczba od 1 do 7
         "_sum_": //liczba; suma
     }
+}
+```
+
+Przy `users` jest nieco inaczej - zwraca górne wraz z `"mult": false`, gdy dotyczy to głównego konta.
+Natomiast zwróci to, gdy to jest multikonto:
+
+```json
+{
+    "api_version": "1.2", //ciąg znaków
+    "mult": true, //wartość logiczna
+    "reference": "" //ciąg znaków; Snowflake (ID)
 }
 ```
 
@@ -46,10 +56,13 @@ Na stan 6.01.2025 mamy 8 kategorii:
 -   `harassment_or_bullying` (prześladowanie lub znęcanie się)
 -   `sexual_behaviour` (zachowanie seksualne \[m.in. gwałt, pedofilstwo])
 -   `illegal_content` (nielegalny kontent)
+-   `violent_content` (omijanie ograniczeń)
 -   `acting_against_smth` (działania na szkodę kogoś/czegoś)
 -   `hate_speech` (mowa nienawiści)
 -   `exposing_private_identifying_info` (upublicznianie cudzych danych)
 -   `theft` (kradzież \[tj. serwera, prac - każdy typ posiadający prawa autorskie])
+-   `misinformation` (dezinformacja, szerzenie informacji wprowadzających w błąd)
+-   `evasion_of_restrictions` (omijanie ograniczeń [np. poprzez multikonta czy VPN/VPS])
 
 Główny poziom zalecamy, aby wyliczyć za pomocą "średniej" sumę liczb z `levels` (dajemy także do poziomów `_sum_`, aby ułatwić niektórym pobieranie) przez ilość owych kategorii.
 
