@@ -1,0 +1,13 @@
+{
+    "api_version": "1.2",
+    "mult": false,
+    "report_ids": ["dc11u"],
+    "reasons": {
+        "main": "Wypisywanie (do bota) sprośnych wiadomości na DM/PV",
+        "others": []
+    },
+    "levels": {
+        "sexual_behaviour": 3,
+        "_sum_": 3
+    }
+}
