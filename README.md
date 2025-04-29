@@ -56,7 +56,7 @@ Na stan 6.01.2025 mamy 8 kategorii:
 -   `harassment_or_bullying` (prześladowanie lub znęcanie się)
 -   `sexual_behaviour` (zachowanie seksualne \[m.in. gwałt, pedofilstwo])
 -   `illegal_content` (nielegalny kontent)
--   `violent_content` (omijanie ograniczeń)
+-   `violent_content` (treści przemocowe)
 -   `acting_against_smth` (działania na szkodę kogoś/czegoś)
 -   `hate_speech` (mowa nienawiści)
 -   `exposing_private_identifying_info` (upublicznianie cudzych danych)
