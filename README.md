@@ -51,7 +51,8 @@ Natomiast zwróci to, gdy jest multikontem lub "wtykiem":
 }
 ```
 
-> [!NOTE] > **Wszystkie** zgłoszenia posiadające ID w stylu `odc#0`, pozostaną na wersji API 1.2 **aż do wypuszczenia 2.0**.
+> [!NOTE]
+> **Wszystkie** zgłoszenia posiadające ID w stylu `odc#0`, pozostaną na wersji API 1.2 **aż do wypuszczenia 2.0** - to dlatego, że wszystkie dowody, które były, zniknęły wraz ze starymi kanałami Discord...
 
 Na stan 6.01.2025 mamy 8 kategorii:
 
