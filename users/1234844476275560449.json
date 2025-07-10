@@ -1,7 +1,7 @@
 {
     "api_version": "1.2",
     "mult": false,
-    "report_ids": ["dc6u"],
+    "report_ids": ["odc#6"],
     "reasons": {
         "main": "Wyzywanie każdego kogo popadnie i próba ominięcia blokady",
         "others": []

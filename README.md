@@ -27,11 +27,12 @@ Tak wygląda zwrócony obliekt przy `bots` oraz `guilds`:
 ```json
 {
     "api_version": "0.0", //ciąg znaków
-    "report_ids": ["dc0t", "gh#0"], // tablica ciągów znaków; dc- oznacza zgłoszenie w Discordzie, gh- oznacza zgłoszenie w GitHubie
+    "report_ids": ["dc0t", "gh#0", "s.0", "odc#0"], //tablica ciągów znaków; dc- oznacza zgłoszenie w Discordzie (odc- w czasach przed rajdem), gh- oznacza zgłoszenie w GitHubie. s- oznacza specjalne zgłoszenie, które (w rzadkich wypadkach) nie mogło być utworzone, lub wymagało natychmiastowego działania.
     "reasons": {
         "main": "Powód główny", //ciąg znaków
         "others": ["Powód poboczny nr. 1", "Powód poboczny nr. 2"] // tablica ciągów znaków
     },
+    "proofs": [""], //tablica ciągów znaków; $report:id oznacza sprawozdanie jednego z przypisanych id zgłoszeń, brak dolara na początku oznacza czysty tekst.
     "levels": {
         //obiekt zawierający (niecałe) kategorie, liczba od 1 do 7
         "_sum_": //liczba; suma
@@ -40,15 +41,17 @@ Tak wygląda zwrócony obliekt przy `bots` oraz `guilds`:
 ```
 
 Przy `users` jest nieco inaczej - zwraca górne wraz z `"mult": false`, gdy dotyczy to głównego konta.
-Natomiast zwróci to, gdy to jest multikonto:
+Natomiast zwróci to, gdy jest multikontem lub "wtykiem":
 
 ```json
 {
-    "api_version": "1.2", //ciąg znaków
+    "api_version": "0.0", //ciąg znaków
     "mult": true, //wartość logiczna
     "reference": "" //ciąg znaków; Snowflake (ID)
 }
 ```
+
+> [!NOTE] > **Wszystkie** zgłoszenia posiadające ID w stylu `odc#0`, pozostaną na wersji API 1.2 **aż do wypuszczenia 2.0**.
 
 Na stan 6.01.2025 mamy 8 kategorii:
 

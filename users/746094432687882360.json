@@ -1,7 +1,7 @@
 {
     "api_version": "1.2",
     "mult": false,
-    "report_ids": ["dc4a"],
+    "report_ids": ["odc#4"],
     "reasons": {
         "main": "Czynny udział w rajdzie - dodanie bota",
         "others": []

@@ -1,7 +1,7 @@
 {
     "api_version": "1.2",
     "mult": false,
-    "report_ids": ["dc11u"],
+    "report_ids": ["odc#11"],
     "reasons": {
         "main": "Wypisywanie (do bota) sprośnych wiadomości na DM/PV",
         "others": []

@@ -1,7 +1,7 @@
 {
     "api_version": "1.2",
     "mult": false,
-    "report_ids": ["dc13u"],
+    "report_ids": ["odc#13"],
     "reasons": {
         "main": "Próba okłamania o zgłoszonym koncie Steam.",
         "others": []
