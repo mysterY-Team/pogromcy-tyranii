@@ -1,0 +1,26 @@
+{
+    "api_version": "1.3",
+    "mult": false,
+    "report_ids": ["s.1"],
+    "reasons": {
+        "main": "Czynny udział w rajdzie - przejęcie bota",
+        "others": [
+            "Nadużywanie uprawnień",
+            "Masowe usuwanie swoich wiadomości w ramach \"bezpieczeństwa\"",
+            "Próba ominięcia blokady i stosowanie spyware w bocie",
+            "Szykanowanie i personalne ataki",
+            "Bezpodstawne banowanie użytkowników"
+        ]
+    },
+    "proofs": ["Sprawozdanie"],
+    "levels": {
+        "scam": 5,
+        "harassment_or_bullying": 5,
+        "acting_against_smth": 7,
+        "hate_speech": 2,
+        "theft": 3,
+        "misinformation": 4,
+        "evasion_of_restrictions": 4,
+        "_sum_": 30
+    }
+}

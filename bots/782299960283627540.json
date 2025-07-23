@@ -1,0 +1,13 @@
+{
+    "api_version": "1.3",
+    "report_ids": ["s.1"],
+    "reasons": {
+        "main": "Potencjalny spyware",
+        "others": ["Największy poziom w kategorii \"acting_against_smth\" u właściciela"]
+    },
+    "proofs": ["Sprawozdanie"],
+    "levels": {
+        "acting_against_smth": 4,
+        "_sum_": 0
+    }
+}

@@ -27,15 +27,15 @@ Tak wygląda zwrócony obliekt przy `bots` oraz `guilds`:
 ```json
 {
     "api_version": "0.0", //ciąg znaków
-    "report_ids": ["dc0t", "gh#0", "s.0", "odc#0"], //tablica ciągów znaków; dc- oznacza zgłoszenie w Discordzie (odc- w czasach przed rajdem), gh- oznacza zgłoszenie w GitHubie. s- oznacza specjalne zgłoszenie, które (w rzadkich wypadkach) nie mogło być utworzone, lub wymagało natychmiastowego działania.
+    "report_ids": ["dc0t", "gh#0", "s.0", "odc#0"], //tablica ciągów znaków; dc- oznacza zgłoszenie w Discordzie (odc- w czasach przed rajdem), gh- oznacza zgłoszenie w GitHubie. s- oznacza zgłoszenie wynikające z utworzonych sprawozdań.
     "reasons": {
         "main": "Powód główny", //ciąg znaków
         "others": ["Powód poboczny nr. 1", "Powód poboczny nr. 2"] // tablica ciągów znaków
     },
-    "proofs": [""], //tablica ciągów znaków; $report:id oznacza sprawozdanie jednego z przypisanych id zgłoszeń, brak dolara na początku oznacza czysty tekst.
+    "proofs": ["Dowód nr. 1", "Dowód nr. 2"], //tablica ciągów znaków
     "levels": {
         //obiekt zawierający (niecałe) kategorie, liczba od 1 do 7
-        "_sum_": //liczba; suma
+        "_sum_": 0 //liczba; suma
     }
 }
 ```
@@ -51,10 +51,9 @@ Natomiast zwróci to, gdy jest multikontem lub "wtykiem":
 }
 ```
 
-> [!NOTE]
-> **Wszystkie** zgłoszenia posiadające ID w stylu `odc#0`, pozostaną na wersji API 1.2 **aż do wypuszczenia 2.0** - to dlatego, że wszystkie dowody, które były, zniknęły wraz ze starymi kanałami Discord...
+> [!NOTE] > **Wszystkie** zgłoszenia posiadające ID w stylu `odc#0`, pozostaną na wersji API 1.2 **aż do wypuszczenia 2.0** - to dlatego, że wszystkie dowody, które były, zniknęły wraz ze starymi kanałami Discord...
 
-Na stan 6.01.2025 mamy 8 kategorii:
+Na stan 29.04.2025 mamy 11 kategorii:
 
 -   `scam` (scam/oszukiwanie)
 -   `harassment_or_bullying` (prześladowanie lub znęcanie się)
@@ -72,4 +71,4 @@ Główny poziom zalecamy, aby wyliczyć za pomocą "średniej" sumę liczb z `le
 
 ## Nadawanie zgłoszeń
 
-Zgłoszenia można pisać albo z GitHuba przez "Issues", lub na [serwerze Discord](https://discord.gg/jrmMNFtkZU) w oddzielnej do tego kategorii (możliwe **tylko** po odebranej roli).
+Zgłoszenia można pisać albo z GitHuba przez "Issues", lub na [serwerze mysterY](https://discord.gg/mystery-support) w oddzielnej do tego kategorii (możliwe **tylko** po odebranej roli).
